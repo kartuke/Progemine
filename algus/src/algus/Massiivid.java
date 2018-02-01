@@ -19,4 +19,5 @@ public class Massiivid{
       for(int pikkus: pikkused){summa+=pikkus;}
       System.out.println(summa);
       System.out.println(Arrays.stream(pikkused).sum());
+    }
 }
