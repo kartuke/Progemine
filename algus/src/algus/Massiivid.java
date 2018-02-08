@@ -58,3 +58,23 @@ public class Massiivid {
       System.out.println(Arrays.stream(pikkused).sum());
    }    
 }
+/* 
+837
+167.4
+Kokku: 5
+176 169
+176
+163
+158
+171
+169
+176
+163
+158
+171
+169
+0
+837
+837
+'/
+
