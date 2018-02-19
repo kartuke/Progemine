@@ -16,7 +16,7 @@ public class Pallivise {
     void liigu(){
         lendaja.liigu();
         System.out.println(lendaja +" "+kasPihtas());
-        if(kasPihtas()){ seisund=Seisundid.PIHTAS;}
+        if(kasPihtas().equals("Pallid puutuvad kokku")){ seisund=Seisundid.PIHTAS;}
         if(lendaja.getX()>sihtkoht.getX() && seisund==Seisundid.ALUSTATUD){
             seisund=Seisundid.M88DAS;
         }
