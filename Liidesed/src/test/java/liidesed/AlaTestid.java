@@ -62,7 +62,7 @@ public class AlaTestid {
         assertFalse(a.kasVaba(10, 9));
         assertFalse(a.kasVaba(0, 0));
         assertFalse(a.kasVaba(-1, 0));
-         assertFalse(a.kasVaba(0, -1));
+        assertFalse(a.kasVaba(0, -1));
     }
     @Test public void vaiksemAlaKohad(){
         Ala a2= new Ala(3,6);
@@ -71,5 +71,29 @@ public class AlaTestid {
         assertFalse(a2.kasVaba(5, 2));
         assertTrue(a2.kasVaba(0, 0));
         assertFalse(a2.kasVaba(1, 2));
+    }
+    @Test
+    public void kivid(){
+       assertFalse(a.lisaKivi(new Kivi(0, 0)));
+       assertTrue(a.lisaKivi(new Kivi(0, 1)));
+       assertFalse(a.lisaKivi(new Kivi(0, 1)));
+       assertFalse(a.lisaKivi(new Kivi(-1, 1)));
+    }
+    
+    @Test
+    public void kividJoonisel(){
+       a.lisaKivi(new Kivi(0, 1));
+       assertThat(a.toString(), is(
+               ">.........\n"+
+               "o.........\n"+
+               "..........\n"+
+               "..........\n"+
+               "..........\n"+
+               "..........\n"+
+               "..........\n"+
+               "..........\n"+
+               "..........\n"+
+               "..........\n")
+       );
     }
 }

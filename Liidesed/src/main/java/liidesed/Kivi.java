@@ -16,4 +16,9 @@ public class Kivi implements AsukohagaObjekt {
     public int kysiY() {
         return y;
     }
+    
+    @Override
+    public String toString(){
+        return"o ("+x+","+y+")";
+    }
 }

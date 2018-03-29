@@ -30,6 +30,17 @@ class Ala {
         }*/
         return true;
     }
+    //Koostage käsklus kivi lisamiseks alasse
+    //Kontrollige tööd testiga
+      public boolean lisaKivi(Kivi k){
+       if(kasVaba(k.kysiX(), k.kysiY())){
+          objektid.add(k);
+          m[k.kysiX()][k.kysiY()]=k.toString().charAt(0);
+          return true;
+       }
+       return false;
+    }
+      
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
